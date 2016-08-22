@@ -1,8 +1,8 @@
 # Hubscreen
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hubscreen`. To experiment with that code, run `bin/console` for an interactive prompt.
+Hubscreen is a multi-purpose Ruby wrapper for the [Hubspot CRM API](https://developers.hubspot.com/docs/endpoints), providing developers with low-level access to request-response cycle, or abstract the entire process through ruby objects. Hubscreen is designed to accelerate the integration of Hubspot into a ruby application. As Hubscreen was not initially designed as a foundation for a client facing Hubspot integration (i.e. published to the Hubspot integration library), no OAuth functionality has been provided. 
 
-TODO: Delete this and the text above, and describe your gem
+Documentation for the HubSpot REST API can be found here: https://developers.hubspot.com/docs/endpoints
 
 ## Installation
 
@@ -38,4 +38,16 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## Disclaimer
+
+This project and the code therein was not created by and is not supported by HubSpot, Inc or any of its affiliates.
+
+## Copyright
+
+Copyright (c) 2016 IMIT Advisory Limited. See LICENSE.txt for further details.
+
+Some libraries are based on the [hubspot-crm gem](https://github.com/adimichele/hubspot-ruby). Refer to code base for details
+
+
 
