@@ -7,7 +7,7 @@ module Hubscreen
   # By default all APIRequests will return a Response object. To disable this, set Hubscreen.configure(encapsulate_response: false)
 
   class Response
-    attr_accessor :raw_hash, :raw_response
+    attr_accessor :raw_hash, :raw_response, :status_code
 
     def initialize(response_json_hash)
       @raw_hash = response_json_hash

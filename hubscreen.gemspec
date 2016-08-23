@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
 
   #Gem Dependancies
   spec.add_dependency(%q<activesupport>, [">= 4"])
-  spec.add_dependency('faraday', '>= 0.8')
+  spec.add_dependency('faraday', '>= 0.9')
   spec.add_dependency('multi_json', '>= 1')
   spec.add_dependency('recursive-open-struct', '>= 1.0')
 

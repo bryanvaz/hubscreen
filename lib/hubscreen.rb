@@ -12,6 +12,7 @@ require "hubscreen/request"
 require "hubscreen/response"
 
 #Gem Lib Files
+require "hubscreen/utils"
 require "hubscreen/version"
 require "hubscreen/config"
 require "hubscreen/exceptions"

@@ -1,4 +1,8 @@
 module Hubscreen
+  #
+  # Primary Request Object for API Access
+  #
+  # Remember to protect all API requests with error handling to catch non 200 response codes
   class Request
     attr_accessor :api_key, :api_endpoint, :timeout, :proxy, :faraday_adapter, :debug
 

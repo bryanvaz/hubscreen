@@ -127,16 +127,20 @@ module Hubscreen
 
     def configure_request(request: nil, params: nil, headers: nil, body: nil)
       if request
+        request.options.params_encoder = Faraday::FlatParamsEncoder
         request.params.merge!(params) if params
         request.headers['Content-Type'] = 'application/json'
         request.headers.merge!(headers) if headers
         request.body = body if body
-        request.options.timeout = self.timeout
+        request.options.timeout = self.timeout        
       end
     end
 
+    # Note REST Client has been modified for Flat Parameter Encoding to support Hubspot's batch search functionality.
+    # This however limit's Faraday's ability to accept nested parameters
     def rest_client
       client = Faraday.new(self.api_url, proxy: self.proxy) do |faraday|
+        
         faraday.response :raise_error
         faraday.adapter adapter
         if @request_builder.debug
