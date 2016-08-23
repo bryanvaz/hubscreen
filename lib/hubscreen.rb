@@ -8,6 +8,7 @@ require 'cgi'
 #Rest API Helpers
 require "hubscreen/api_request"
 require "hubscreen/request"
+require "hubscreen/response"
 
 #Gem Lib Files
 require "hubscreen/version"

@@ -6,6 +6,7 @@ module Hubscreen
     # A new API request must pass in a Hubscreen::Request Object 
     def initialize(builder: nil)
       @request_builder = builder
+      @return_encapuslated_object = Hubscreen::Config.encapsulate_response
     end
 
     def post(params: nil, headers: nil, body: nil)
@@ -161,8 +162,11 @@ module Hubscreen
           raise error
         end
       end
-
-      parsed_response
+      if @return_encapuslated_object
+        return Hubscreen::Response.new(parsed_response)
+      else
+        return parsed_response
+      end
     end
 
     def validate_api_key

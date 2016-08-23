@@ -5,9 +5,10 @@ require 'logger'
 module Hubscreen
   class Config
 
-    CONFIG_KEYS = [:hapikey, :base_url, :portal_id, :logger]
+    CONFIG_KEYS = [:hapikey, :base_url, :portal_id, :logger, :encapsulate_response]
     DEFAULT_LOGGER = Logger.new(STDOUT)
     DEFAULT_BASE_URL = "https://api.hubapi.com/"
+    DEFAULT_RESPONSE_ENCAPSULATION = true
 
     class << self
       attr_accessor *CONFIG_KEYS
@@ -18,6 +19,7 @@ module Hubscreen
         @base_url = config["base_url"] || DEFAULT_BASE_URL
         @portal_id = config["portal_id"] #not currenty used
         @logger = config['logger'] || DEFAULT_LOGGER
+        @encapsulate_response = config['encapsulate_response'] || DEFAULT_RESPONSE_ENCAPSULATION
         self
       end
 
@@ -26,6 +28,7 @@ module Hubscreen
         @base_url = DEFAULT_BASE_URL
         @portal_id = nil
         @logger = DEFAULT_LOGGER
+        @encapsulate_response = DEFAULT_RESPONSE_ENCAPSULATION
       end
 
       def ensure!(*params)

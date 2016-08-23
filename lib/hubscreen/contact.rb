@@ -5,7 +5,8 @@ module Hubscreen
   # {https://developers.hubspot.com/docs/methods/contacts/contacts-overview}
   #
   
-  class Contact
-
+  class Contact < Response
+    
   end
+
 end

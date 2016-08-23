@@ -43,6 +43,8 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 This project and the code therein was not created by and is not supported by HubSpot, Inc or any of its affiliates.
 
+Hubscreen is provided on an AS-IS basis. Any use of of this code in a business environment should be subjected to additional functional and integration testing prior to release.
+
 ## Copyright
 
 Copyright (c) 2016 IMIT Advisory Limited. See LICENSE.txt for further details.
