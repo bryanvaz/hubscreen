@@ -34,10 +34,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.5"
   spec.add_development_dependency "vcr", "~> 3.0"
   spec.add_development_dependency "webmock", "~> 2.1"
-
-
+  
   #Interactive Testing
-  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'pry-byebug'
 
   spec.add_dependency(%q<activesupport>, [">= 5.0.0"])
   spec.add_dependency('faraday', '>= 0.9.2')

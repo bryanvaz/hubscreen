@@ -16,6 +16,7 @@ require 'hubscreen'
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
+require 'pry'
 #require 'rr'
 
 
@@ -33,6 +34,7 @@ RSpec.configure do |config|
     Hubscreen::Config.reset!
   end
 
+  #TODO: Add VCR for API Requests Response tests
   config.around(:each, live: true) do |example|
     VCR.turn_off!
     WebMock.disable!

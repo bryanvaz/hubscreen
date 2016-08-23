@@ -73,7 +73,7 @@ module Hubscreen
       end
     end
 
-    #protected
+    protected
 
     # Convenience accessors
 
@@ -168,10 +168,10 @@ module Hubscreen
     def validate_api_key
       api_key = self.api_key
       api_endpoint = self.api_endpoint
-      unless api_key
+      unless !api_key.blank?
         raise Hubscreen::ApiError, "You must set an api_key prior to making a call"
       end
-      unless api_endpoint
+      unless !api_endpoint.blank?
         raise Hubscreen::ApiError, "You must set an api_endpoint prior to making a call"
       end
     end

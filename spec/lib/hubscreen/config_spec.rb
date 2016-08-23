@@ -14,7 +14,7 @@ describe Hubscreen::Config do
     end
 
     it "sets a default value for base_url" do
-      expect(Hubscreen::Config.base_url).to eq("https://api.hubapi.com")
+      expect(Hubscreen::Config.base_url).to eq("https://api.hubapi.com/")
     end
 
     it "sets a value for portal_id" do
@@ -29,7 +29,7 @@ describe Hubscreen::Config do
     it "clears out the config" do
       subject
       expect(Hubscreen::Config.hapikey).to be_nil
-      expect(Hubscreen::Config.base_url).to eq("https://api.hubapi.com")
+      expect(Hubscreen::Config.base_url).to eq("https://api.hubapi.com/")
       expect(Hubscreen::Config.portal_id).to be_nil
     end
   end
