@@ -4,6 +4,7 @@ require 'active_support/core_ext'
 require 'faraday'
 require 'multi_json'
 require 'cgi'
+require 'recursive-open-struct'
 
 #Rest API Helpers
 require "hubscreen/api_request"

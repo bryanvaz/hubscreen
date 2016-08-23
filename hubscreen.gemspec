@@ -38,8 +38,10 @@ Gem::Specification.new do |spec|
   #Interactive Testing
   spec.add_development_dependency 'pry-byebug'
 
+  #Gem Dependancies
   spec.add_dependency(%q<activesupport>, [">= 5.0.0"])
   spec.add_dependency('faraday', '>= 0.9.2')
   spec.add_dependency('multi_json', '>= 1.12.1')
+  spec.add_dependency('recursive-open-struct', '>= 1.0')
 
 end

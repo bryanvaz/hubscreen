@@ -11,7 +11,18 @@ module Hubscreen
 
     def initialize(response_json_hash)
       @raw_hash = response_json_hash
-      @raw_response = OpenStruct.new(response_json_hash)
+      @raw_response = RecursiveOpenStruct.new(response_json_hash)
+    end
+
+    # Prints out the raw response in formatted JSON.
+    # This method is primarily used to aid in debugging
+    def pretty_response
+      JSON.pretty_generate(@raw_hash)
+    end
+
+    #Type Cast Helpers
+    def contact
+      Contact.new(self)
     end
   end
 end
